@@ -37,13 +37,4 @@ def bad_cookie():
     resp.set_cookie('lucky_number', 'bad_cookie_is_not_an_integer_number')
     return resp
 
-
-# run with
-# on Linux:
-#   export FLASK_APP="main.py"
-#   export FLASK_ENV="development"
-#   flask run -h 127.0.0.2 -p 5001
-# in Powershell:
-#   $env:FLASK_APP="main.py"
-#   $env:FLASK_ENV="development"
-#   flask run -h 127.0.0.2 -p 5001
+app.run(host='127.0.0.2', port='8080', debug=True)
